@@ -72,6 +72,9 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void removeCity(City city) throws Exception{
+        if (!this.cities.remove(city)){
+            throw new Exception("Item not in list");
+        }
     }
 
 }
